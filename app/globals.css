@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --toro-blue: #0891B2;
+  --toro-dark: #1E293B;
+  --toro-green: #10B981;
+  --toro-red: #EF4444;
+  --toro-gray: #64748B;
+  --toro-light-gray: #F1F5F9;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-white text-slate-900 font-sans;
+  }
+}
+
+@layer components {
+  .stock-card {
+    @apply bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-200;
+  }
+  
+  .price-flash-green {
+    animation: flashGreen 0.5s ease-out;
+  }
+  
+  .price-flash-red {
+    animation: flashRed 0.5s ease-out;
+  }
+}
+
+@keyframes flashGreen {
+  0% { background-color: rgba(16, 185, 129, 0.2); }
+  100% { background-color: transparent; }
+}
+
+@keyframes flashRed {
+  0% { background-color: rgba(239, 68, 68, 0.2); }
+  100% { background-color: transparent; }
+}
