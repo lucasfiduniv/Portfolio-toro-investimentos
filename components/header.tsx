@@ -17,13 +17,14 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="text-xl font-bold text-cyan-400">
-              🚀 TORO
-            </div>
-          </div>
+            <img
+              src='https://www.toroinvestimentos.com.br/assets-next/logos/Logo_Toro_Branco_RGB.svg'
+              alt="Logo Toro Investimentos"
+              className="h-10 w-auto" // <-- CORREÇÃO AQUI: Define um tamanho para a imagem
+            /> </div>
         </div>
       </div>
-      
+
       {/* Seção principal com título e filtros */}
       <div className="bg-white text-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -31,7 +32,7 @@ export function Header() {
             <h1 className="text-3xl font-bold text-gray-900">
               Explore o mercado
             </h1>
-            
+
             <div className="flex items-center gap-2">
               <span className="text-sm text-gray-500 mr-2">Ordenar:</span>
               <button
